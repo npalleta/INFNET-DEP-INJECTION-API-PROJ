@@ -9,5 +9,4 @@ public class InfnetApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(InfnetApplication.class, args);
 	}
-
 }
