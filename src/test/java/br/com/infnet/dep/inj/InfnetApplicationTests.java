@@ -9,5 +9,4 @@ class InfnetApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
 }
