@@ -1,12 +1,13 @@
 package br.com.infnet.dep.inj;
 
-import br.com.infnet.dep.inj.model.business.Pedido;
+import static java.lang.System.out;
+
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 
-import static java.lang.System.out;
+import br.com.infnet.dep.inj.model.business.Pedido;
 
-public class PedidoTeste  implements ApplicationRunner {
+public class PedidoTeste implements ApplicationRunner {
 
     public static void main(String[] args) {
         Pedido pedido = new Pedido();

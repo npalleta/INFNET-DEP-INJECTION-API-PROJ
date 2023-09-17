@@ -6,7 +6,6 @@ public class Bebida extends Produto {
     private float tamanho;
     private String marca;
 
-
     public Bebida(String nome, float valor, int codigo, boolean gelada, float tamanho, String marca) {
         super(nome, valor, codigo);
         this.gelada = gelada;

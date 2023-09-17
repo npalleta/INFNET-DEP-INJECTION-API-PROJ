@@ -1,11 +1,13 @@
 package br.com.infnet.dep.inj;
 
-import br.com.infnet.dep.inj.model.business.Pedido;
+import static java.lang.System.out;
+
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
-import static java.lang.System.out;
+import br.com.infnet.dep.inj.model.business.Pedido;
+
 @Component
 public class PedidoLoader implements ApplicationRunner {
 

@@ -17,10 +17,9 @@ public class Pedido {
     @Override
     public String toString() {
         return "Pedido{" +
-            "descricao='" + this.descricao + '\'' +
-            ", data=" + this.data +
-            ", web=" + this.web +
-            '}';
-        //
+                "descricao='" + this.descricao + '\'' +
+                ", data=" + this.data +
+                ", web=" + this.web +
+                '}';
     }
 }

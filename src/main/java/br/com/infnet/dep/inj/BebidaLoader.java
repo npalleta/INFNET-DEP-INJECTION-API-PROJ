@@ -1,11 +1,13 @@
 package br.com.infnet.dep.inj;
 
-import br.com.infnet.dep.inj.model.business.Bebida;
+import static java.lang.System.out;
+
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
-import static java.lang.System.out;
+import br.com.infnet.dep.inj.model.business.Bebida;
+
 @Component
 public class BebidaLoader implements ApplicationRunner {
 
