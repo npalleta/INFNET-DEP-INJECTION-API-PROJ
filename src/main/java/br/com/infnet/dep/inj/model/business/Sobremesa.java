@@ -13,6 +13,30 @@ public class Sobremesa extends Produto {
         this.informacao = informacao;
     }
 
+    public float getQuantidade() {
+        return quantidade;
+    }
+
+    public void setQuantidade(float quantidade) {
+        this.quantidade = quantidade;
+    }
+
+    public boolean isDoce() {
+        return doce;
+    }
+
+    public void setDoce(boolean doce) {
+        this.doce = doce;
+    }
+
+    public String getInformacao() {
+        return informacao;
+    }
+
+    public void setInformacao(String informacao) {
+        this.informacao = informacao;
+    }
+
     @Override
     public String toString() {
         return String.format("%s;%.2f;%s;%s",

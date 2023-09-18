@@ -13,6 +13,30 @@ public class Comida extends Produto {
         this.ingredientes = ingredientes;
     }
 
+    public float getPeso() {
+        return peso;
+    }
+
+    public void setPeso(float peso) {
+        this.peso = peso;
+    }
+
+    public boolean isVegano() {
+        return vegano;
+    }
+
+    public void setVegano(boolean vegano) {
+        this.vegano = vegano;
+    }
+
+    public String getIngredientes() {
+        return ingredientes;
+    }
+
+    public void setIngredientes(String ingredientes) {
+        this.ingredientes = ingredientes;
+    }
+
     @Override
     public String toString() {
         return String.format("%s;%.2f;%s;%s",
