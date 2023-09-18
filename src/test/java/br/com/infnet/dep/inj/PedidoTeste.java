@@ -10,7 +10,7 @@ import br.com.infnet.dep.inj.model.business.Pedido;
 public class PedidoTeste implements ApplicationRunner {
 
     public static void main(String[] args) {
-        Pedido pedido = new Pedido();
+        Pedido pedido = new Pedido(null, null);
         out.println("Inclusão de pedido realizada com sucesso: " + pedido);
     }
 

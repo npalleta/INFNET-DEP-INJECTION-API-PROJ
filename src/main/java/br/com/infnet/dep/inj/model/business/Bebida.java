@@ -13,6 +13,30 @@ public class Bebida extends Produto {
         this.marca = marca;
     }
 
+    public boolean isGelada() {
+        return gelada;
+    }
+
+    public void setGelada(boolean gelada) {
+        this.gelada = gelada;
+    }
+
+    public float getTamanho() {
+        return tamanho;
+    }
+
+    public void setTamanho(float tamanho) {
+        this.tamanho = tamanho;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
     @Override
     public String toString() {
         return String.format("%s;%s;%.2f;%s", super.toString(), gelada, tamanho, marca);

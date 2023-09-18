@@ -12,8 +12,32 @@ public abstract class Produto {
         this.codigo = codigo;
     }
 
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public float getValor() {
+        return valor;
+    }
+
+    public void setValor(float valor) {
+        this.valor = valor;
+    }
+
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
+
     @Override
     public String toString() {
-        return String.format("%s;%.2f;%d", nome, valor, codigo);
+        return String.format("%s;%.2f;%d", this.nome, this.valor, this.codigo);
     }
 }

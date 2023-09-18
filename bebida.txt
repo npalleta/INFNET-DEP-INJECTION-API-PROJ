@@ -1,0 +1,3 @@
+Suco;10;123;false;500;Sucão
+Refri;20;234;true;1500;Coke
+Beer;30;345;true;2000;Zeca
