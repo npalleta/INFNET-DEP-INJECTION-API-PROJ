@@ -53,8 +53,7 @@ public class BebidaLoader implements ApplicationRunner {
             out.println("Chave: " + mapaBebida.values());
         }
 
-        // Bebida bebida = new Bebida("Fanta Uva", 5.00f, 100, true, 0.20f,
-        // "Coca-Cola");
+        // Bebida bebida = new Bebida("Fanta Uva", 5.00f, 100, true, 0.20f, "Coca-Cola");
         leitura.close();
     }
 }
