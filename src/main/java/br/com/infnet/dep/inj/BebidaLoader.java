@@ -24,7 +24,7 @@ public class BebidaLoader implements ApplicationRunner {
 
         Map<Integer, Bebida> mapaBebida = new HashMap<>();
 
-        FileReader arquivo = new FileReader("bebida.txt", StandardCharsets.UTF_8);
+        FileReader arquivo = new FileReader("arquivos/bebida.txt", StandardCharsets.UTF_8);
         BufferedReader leitura = new BufferedReader(arquivo);
 
         String linha = leitura.readLine();
