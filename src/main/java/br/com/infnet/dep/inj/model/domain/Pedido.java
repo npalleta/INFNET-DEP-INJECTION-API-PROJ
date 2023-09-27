@@ -1,4 +1,4 @@
-package br.com.infnet.dep.inj.model.business;
+package br.com.infnet.dep.inj.model.domain;
 
 import java.time.LocalDateTime;
 import java.util.List;

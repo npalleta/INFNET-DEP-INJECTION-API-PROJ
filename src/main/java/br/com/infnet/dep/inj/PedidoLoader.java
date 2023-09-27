@@ -14,12 +14,12 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
-import br.com.infnet.dep.inj.model.business.Bebida;
-import br.com.infnet.dep.inj.model.business.Comida;
-import br.com.infnet.dep.inj.model.business.Pedido;
-import br.com.infnet.dep.inj.model.business.Produto;
-import br.com.infnet.dep.inj.model.business.Sobremesa;
-import br.com.infnet.dep.inj.model.business.Solicitante;
+import br.com.infnet.dep.inj.model.domain.Bebida;
+import br.com.infnet.dep.inj.model.domain.Comida;
+import br.com.infnet.dep.inj.model.domain.Pedido;
+import br.com.infnet.dep.inj.model.domain.Produto;
+import br.com.infnet.dep.inj.model.domain.Sobremesa;
+import br.com.infnet.dep.inj.model.domain.Solicitante;
 
 @Order(5)
 @Component

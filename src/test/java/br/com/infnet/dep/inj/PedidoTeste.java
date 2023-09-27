@@ -5,7 +5,7 @@ import static java.lang.System.out;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 
-import br.com.infnet.dep.inj.model.business.Pedido;
+import br.com.infnet.dep.inj.model.domain.Pedido;
 
 public class PedidoTeste implements ApplicationRunner {
 

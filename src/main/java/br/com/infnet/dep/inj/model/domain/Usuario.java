@@ -1,4 +1,4 @@
-package br.com.infnet.dep.inj.model.business;
+package br.com.infnet.dep.inj.model.domain;
 
 public class Usuario {
 

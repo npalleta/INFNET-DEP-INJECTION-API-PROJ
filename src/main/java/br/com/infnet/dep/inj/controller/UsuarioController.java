@@ -2,10 +2,7 @@ package br.com.infnet.dep.inj.controller;
 
 import static java.lang.System.out;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,50 +11,30 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
-import br.com.infnet.dep.inj.model.business.Usuario;
+import br.com.infnet.dep.inj.model.domain.Usuario;
+import br.com.infnet.dep.inj.model.service.UsuarioService;
 
-@SessionAttributes("username")
+@SessionAttributes("user")
 @Controller
 public class UsuarioController {
 
-	private Map<String, Usuario> mapaUsuario = new HashMap<>();
-
-	public void incluir(Usuario usuario) {
-		mapaUsuario.put(usuario.getEmail(), usuario);
-		out.println("[Usuário] Inclusão realizada com sucesso: " + usuario);
-	}
-
-	public void excluir(String email) {
-		mapaUsuario.remove(email);
-	}
-
-	public Usuario validar(String email, String senha) {
-		Usuario usuario = mapaUsuario.get(email);
-		if (usuario != null) {
-			if (senha.equalsIgnoreCase(usuario.getSenha()))
-				return usuario;
-		}
-		return null;
-	}
+	@Autowired
+	private UsuarioService usuarioService;
 
 	@PostMapping(value = "/valida")
 	public String validaLogin(Model model, @RequestParam String email, @RequestParam String senha) {
-		Usuario usuario = validar(email, senha);
+		Usuario user = usuarioService.validar(email, senha);
 		out.printf("Credenciais: %s - %s", email, senha);
-		if (usuario != null) {
-			model.addAttribute("username", usuario);
+		if (user != null) {
+			model.addAttribute("user", user);
 			return "home";
 		}
 		return "redirect:/login";
 	}
 
-	public Collection<Usuario> obterLista() {
-		return mapaUsuario.values();
-	}
-
 	@GetMapping(value = "/usuario/lista")
 	public String telaLista(Model model) {
-		model.addAttribute("listaUsuario", this.obterLista());
+		model.addAttribute("listaUsuario", usuarioService.obterLista());
 		return "usuario/lista";
 	}
 
@@ -68,13 +45,13 @@ public class UsuarioController {
 
 	@PostMapping(value = "/usuario/incluir")
 	public String inclusao(Usuario usuario) {
-		this.incluir(usuario);
+		usuarioService.incluir(usuario);
 		return "redirect:/";
 	}
 
 	@GetMapping(value = "/usuario/{email}/excluir")
 	public String exclusao(@PathVariable String email) {
-		this.excluir(email);
+		usuarioService.excluir(email);
 		return "redirect:/usuario/lista";
 	}
 }

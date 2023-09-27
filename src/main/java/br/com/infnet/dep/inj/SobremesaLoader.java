@@ -12,7 +12,7 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
-import br.com.infnet.dep.inj.model.business.Sobremesa;
+import br.com.infnet.dep.inj.model.domain.Sobremesa;
 
 @Order(3)
 @Component

@@ -13,7 +13,7 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
-import br.com.infnet.dep.inj.model.business.Bebida;
+import br.com.infnet.dep.inj.model.domain.Bebida;
 
 @Order(1)
 @Component
@@ -50,7 +50,7 @@ public class BebidaLoader implements ApplicationRunner {
 
         for (Integer k : mapaBebida.keySet()) {
             out.println("Chave: " + k);
-            out.println("Chave: " + mapaBebida.values());
+            out.println("Valor: " + mapaBebida.values());
         }
 
         // Bebida bebida = new Bebida("Fanta Uva", 5.00f, 100, true, 0.20f, "Coca-Cola");
